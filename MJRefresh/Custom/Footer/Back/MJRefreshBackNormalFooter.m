@@ -32,6 +32,7 @@
 {
     if (!_loadingView) {
         UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:self.activityIndicatorViewStyle];
+        loadingView.color = self.activityIndicatorViewColor;
         loadingView.hidesWhenStopped = YES;
         [self addSubview:_loadingView = loadingView];
     }
@@ -44,6 +45,11 @@
     
     self.loadingView = nil;
     [self setNeedsLayout];
+}
+- (void)setActivityIndicatorViewColor:(UIColor *)activityIndicatorViewColor{
+        _activityIndicatorViewColor = activityIndicatorViewColor;
+        self.loadingView = nil;
+        [self setNeedsLayout];
 }
 #pragma mark - 重写父类的方法
 - (void)prepare
