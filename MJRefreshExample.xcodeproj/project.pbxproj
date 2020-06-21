@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A2CE0C21ACE01500BEE365 /* MJRefreshConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A2CE0B21ACE01500BEE365 /* MJRefreshConfig.m */; };
+		01EB8272236846CE00813DAA /* MJWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EB8271236846CE00813DAA /* MJWKWebViewController.m */; };
 		2D4698861D0EE6A400CB8025 /* NSBundle+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4698851D0EE6A400CB8025 /* NSBundle+MJRefresh.m */; };
 		2D9BEB091BB15F4A00AED473 /* UIViewController+Example.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9BEAE01BB15F4A00AED473 /* UIViewController+Example.m */; };
 		2D9BEB0A1BB15F4A00AED473 /* MJChiBaoZiFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9BEAE31BB15F4A00AED473 /* MJChiBaoZiFooter.m */; };
@@ -92,6 +94,10 @@
 		2DB2EA271BECBE6700D58F6A /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2EA121BECBE6700D58F6A /* UIScrollView+MJExtension.m */; };
 		2DB2EA281BECBE6700D58F6A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2EA141BECBE6700D58F6A /* UIScrollView+MJRefresh.m */; };
 		2DB2EA291BECBE6700D58F6A /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2EA161BECBE6700D58F6A /* UIView+MJExtension.m */; };
+		84FC857E228037CE001C6728 /* MJRefreshConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A2CE0B21ACE01500BEE365 /* MJRefreshConfig.m */; };
+		88E3200B24839ABA00069FA7 /* MJRefreshTrailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E3200924839ABA00069FA7 /* MJRefreshTrailer.m */; };
+		88E3201124839B2300069FA7 /* MJRefreshStateTrailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E3200E24839B2300069FA7 /* MJRefreshStateTrailer.m */; };
+		88E3201224839B2300069FA7 /* MJRefreshNormalTrailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E3200F24839B2300069FA7 /* MJRefreshNormalTrailer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +124,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01A2CE0A21ACE01500BEE365 /* MJRefreshConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshConfig.h; sourceTree = "<group>"; };
+		01A2CE0B21ACE01500BEE365 /* MJRefreshConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConfig.m; sourceTree = "<group>"; };
+		01EB8270236846CE00813DAA /* MJWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJWKWebViewController.h; sourceTree = "<group>"; };
+		01EB8271236846CE00813DAA /* MJWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJWKWebViewController.m; sourceTree = "<group>"; };
 		2D4698841D0EE6A400CB8025 /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
 		2D4698851D0EE6A400CB8025 /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
 		2D9BEADF1BB15F4A00AED473 /* UIViewController+Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Example.h"; sourceTree = "<group>"; };
@@ -208,6 +218,12 @@
 		2DB2EA141BECBE6700D58F6A /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		2DB2EA151BECBE6700D58F6A /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		2DB2EA161BECBE6700D58F6A /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		88E3200924839ABA00069FA7 /* MJRefreshTrailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshTrailer.m; sourceTree = "<group>"; };
+		88E3200A24839ABA00069FA7 /* MJRefreshTrailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshTrailer.h; sourceTree = "<group>"; };
+		88E3200D24839B2300069FA7 /* MJRefreshNormalTrailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshNormalTrailer.h; sourceTree = "<group>"; };
+		88E3200E24839B2300069FA7 /* MJRefreshStateTrailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshStateTrailer.m; sourceTree = "<group>"; };
+		88E3200F24839B2300069FA7 /* MJRefreshNormalTrailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshNormalTrailer.m; sourceTree = "<group>"; };
+		88E3201024839B2300069FA7 /* MJRefreshStateTrailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshStateTrailer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +320,8 @@
 				2D9BEB061BB15F4A00AED473 /* MJWebViewViewController.h */,
 				2D9BEB071BB15F4A00AED473 /* MJWebViewViewController.m */,
 				2D9BEB081BB15F4A00AED473 /* MJWebViewViewController.xib */,
+				01EB8270236846CE00813DAA /* MJWKWebViewController.h */,
+				01EB8271236846CE00813DAA /* MJWKWebViewController.m */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -405,6 +423,8 @@
 				2DB2EA161BECBE6700D58F6A /* UIView+MJExtension.m */,
 				2D4698841D0EE6A400CB8025 /* NSBundle+MJRefresh.h */,
 				2D4698851D0EE6A400CB8025 /* NSBundle+MJRefresh.m */,
+				01A2CE0A21ACE01500BEE365 /* MJRefreshConfig.h */,
+				01A2CE0B21ACE01500BEE365 /* MJRefreshConfig.m */,
 			);
 			path = MJRefresh;
 			sourceTree = SOURCE_ROOT;
@@ -422,6 +442,8 @@
 				2DB2E9F31BECBE6700D58F6A /* MJRefreshFooter.m */,
 				2DB2E9F41BECBE6700D58F6A /* MJRefreshHeader.h */,
 				2DB2E9F51BECBE6700D58F6A /* MJRefreshHeader.m */,
+				88E3200A24839ABA00069FA7 /* MJRefreshTrailer.h */,
+				88E3200924839ABA00069FA7 /* MJRefreshTrailer.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -429,6 +451,7 @@
 		2DB2E9F61BECBE6700D58F6A /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				88E3200C24839B2300069FA7 /* Trailer */,
 				2DB2E9F71BECBE6700D58F6A /* Footer */,
 				2DB2EA061BECBE6700D58F6A /* Header */,
 			);
@@ -481,6 +504,17 @@
 				2DB2EA0C1BECBE6700D58F6A /* MJRefreshStateHeader.m */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		88E3200C24839B2300069FA7 /* Trailer */ = {
+			isa = PBXGroup;
+			children = (
+				88E3200D24839B2300069FA7 /* MJRefreshNormalTrailer.h */,
+				88E3200F24839B2300069FA7 /* MJRefreshNormalTrailer.m */,
+				88E3201024839B2300069FA7 /* MJRefreshStateTrailer.h */,
+				88E3200E24839B2300069FA7 /* MJRefreshStateTrailer.m */,
+			);
+			path = Trailer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -596,8 +630,8 @@
 				};
 			};
 			buildConfigurationList = 2DA7F9201AA6B4C4005627AB /* Build configuration list for PBXProject "MJRefreshExample" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -651,6 +685,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FC857E228037CE001C6728 /* MJRefreshConfig.m in Sources */,
 				2D9DF46F1F7CE2F90042D6DD /* MJRefreshAutoFooter.m in Sources */,
 				2D9DF4701F7CE2F90042D6DD /* MJRefreshBackFooter.m in Sources */,
 				2D9DF4711F7CE2F90042D6DD /* MJRefreshComponent.m in Sources */,
@@ -705,13 +740,18 @@
 				2DB2EA1E1BECBE6700D58F6A /* MJRefreshAutoStateFooter.m in Sources */,
 				2DB2EA241BECBE6700D58F6A /* MJRefreshStateHeader.m in Sources */,
 				2D9BEB091BB15F4A00AED473 /* UIViewController+Example.m in Sources */,
+				88E3200B24839ABA00069FA7 /* MJRefreshTrailer.m in Sources */,
 				2D9BEB111BB15F4A00AED473 /* MJExampleViewController.m in Sources */,
+				88E3201124839B2300069FA7 /* MJRefreshStateTrailer.m in Sources */,
 				2DB2EA1D1BECBE6700D58F6A /* MJRefreshAutoNormalFooter.m in Sources */,
 				2D9BEB0C1BB15F4A00AED473 /* MJChiBaoZiHeader.m in Sources */,
+				88E3201224839B2300069FA7 /* MJRefreshNormalTrailer.m in Sources */,
 				2DB2EA1B1BECBE6700D58F6A /* MJRefreshHeader.m in Sources */,
+				01EB8272236846CE00813DAA /* MJWKWebViewController.m in Sources */,
 				2D9BEB191BB15F4A00AED473 /* MJTestViewController.m in Sources */,
 				2DB2EA211BECBE6700D58F6A /* MJRefreshBackStateFooter.m in Sources */,
 				2DB2EA281BECBE6700D58F6A /* UIScrollView+MJRefresh.m in Sources */,
+				01A2CE0C21ACE01500BEE365 /* MJRefreshConfig.m in Sources */,
 				2D9BEB151BB15F4A00AED473 /* MJTempViewController.m in Sources */,
 				2D9BEB171BB15F4A00AED473 /* MJCollectionViewController.m in Sources */,
 				2D9BEB0B1BB15F4A00AED473 /* MJChiBaoZiFooter2.m in Sources */,
@@ -785,7 +825,11 @@
 				INFOPLIST_FILE = MJRefreshFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.520it.MJRefreshFramework;
 				PRODUCT_MODULE_NAME = MJRefresh;
 				PRODUCT_NAME = MJRefresh;
@@ -826,7 +870,11 @@
 				INFOPLIST_FILE = MJRefreshFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.520it.MJRefreshFramework;
 				PRODUCT_MODULE_NAME = MJRefresh;
 				PRODUCT_NAME = MJRefresh;
@@ -925,8 +973,11 @@
 				DEVELOPMENT_TEAM = VZA4V5RJLK;
 				GCC_PREFIX_HEADER = MJRefreshExample/PrefixHeader.pch;
 				INFOPLIST_FILE = MJRefreshExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mj.MJRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "635b5bc0-50a5-45d0-a476-9114a3a6d89d";
@@ -943,8 +994,11 @@
 				DEVELOPMENT_TEAM = VZA4V5RJLK;
 				GCC_PREFIX_HEADER = MJRefreshExample/PrefixHeader.pch;
 				INFOPLIST_FILE = MJRefreshExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mj.MJRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "635b5bc0-50a5-45d0-a476-9114a3a6d89d";
@@ -965,7 +1019,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = MJRefreshExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mj.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MJRefreshExample.app/MJRefreshExample";
@@ -981,7 +1039,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = MJRefreshExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mj.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MJRefreshExample.app/MJRefreshExample";

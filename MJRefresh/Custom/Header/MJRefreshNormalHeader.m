@@ -30,8 +30,7 @@
 - (UIActivityIndicatorView *)loadingView
 {
     if (!_loadingView) {
-        UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:self.activityIndicatorViewStyle];
-        loadingView.color = self.activityIndicatorViewColor;
+        UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:_activityIndicatorViewStyle];
         loadingView.hidesWhenStopped = YES;
         [self addSubview:_loadingView = loadingView];
     }
@@ -43,20 +42,24 @@
 {
     _activityIndicatorViewStyle = activityIndicatorViewStyle;
     
+    [self.loadingView removeFromSuperview];
     self.loadingView = nil;
     [self setNeedsLayout];
 }
-- (void)setActivityIndicatorViewColor:(UIColor *)activityIndicatorViewColor{
-    _activityIndicatorViewColor = activityIndicatorViewColor;
-    self.loadingView = nil;
-    [self setNeedsLayout];
-}
+
 #pragma mark - 重写父类的方法
 - (void)prepare
 {
     [super prepare];
     
-    self.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
+    if (@available(iOS 13.0, *)) {
+        _activityIndicatorViewStyle = UIActivityIndicatorViewStyleMedium;
+        return;
+    }
+#endif
+    
+    _activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
 }
 
 - (void)placeSubviews
@@ -66,10 +69,10 @@
     // 箭头的中心点
     CGFloat arrowCenterX = self.mj_w * 0.5;
     if (!self.stateLabel.hidden) {
-        CGFloat stateWidth = self.stateLabel.mj_textWith;
+        CGFloat stateWidth = self.stateLabel.mj_textWidth;
         CGFloat timeWidth = 0.0;
         if (!self.lastUpdatedTimeLabel.hidden) {
-            timeWidth = self.lastUpdatedTimeLabel.mj_textWith;
+            timeWidth = self.lastUpdatedTimeLabel.mj_textWidth;
         }
         CGFloat textWidth = MAX(stateWidth, timeWidth);
         arrowCenterX -= textWidth / 2 + self.labelLeftInset;

@@ -8,10 +8,15 @@
 
 #import "MJRefreshStateHeader.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MJRefreshNormalHeader : MJRefreshStateHeader
 @property (weak, nonatomic, readonly) UIImageView *arrowView;
+@property (weak, nonatomic, readonly) UIActivityIndicatorView *loadingView;
+
+
 /** 菊花的样式 */
-@property (assign, nonatomic) UIActivityIndicatorViewStyle activityIndicatorViewStyle;
-/// 菊花颜色 可控
-@property (nonatomic ,strong) UIColor *activityIndicatorViewColor;
+@property (assign, nonatomic) UIActivityIndicatorViewStyle activityIndicatorViewStyle MJRefreshDeprecated("first deprecated in 3.2.2 - Use `loadingView` property");
 @end
+
+NS_ASSUME_NONNULL_END

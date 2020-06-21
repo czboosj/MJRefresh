@@ -31,8 +31,7 @@
 - (UIActivityIndicatorView *)loadingView
 {
     if (!_loadingView) {
-        UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:self.activityIndicatorViewStyle];
-        loadingView.color = self.activityIndicatorViewColor;
+        UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:_activityIndicatorViewStyle];
         loadingView.hidesWhenStopped = YES;
         [self addSubview:_loadingView = loadingView];
     }
@@ -43,20 +42,23 @@
 {
     _activityIndicatorViewStyle = activityIndicatorViewStyle;
     
+    [self.loadingView removeFromSuperview];
     self.loadingView = nil;
     [self setNeedsLayout];
-}
-- (void)setActivityIndicatorViewColor:(UIColor *)activityIndicatorViewColor{
-        _activityIndicatorViewColor = activityIndicatorViewColor;
-        self.loadingView = nil;
-        [self setNeedsLayout];
 }
 #pragma mark - 重写父类的方法
 - (void)prepare
 {
     [super prepare];
     
-    self.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
+    if (@available(iOS 13.0, *)) {
+        _activityIndicatorViewStyle = UIActivityIndicatorViewStyleMedium;
+        return;
+    }
+#endif
+        
+    _activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
 }
 
 - (void)placeSubviews
@@ -66,7 +68,7 @@
     // 箭头的中心点
     CGFloat arrowCenterX = self.mj_w * 0.5;
     if (!self.stateLabel.hidden) {
-        arrowCenterX -= self.labelLeftInset + self.stateLabel.mj_textWith * 0.5;
+        arrowCenterX -= self.labelLeftInset + self.stateLabel.mj_textWidth * 0.5;
     }
     CGFloat arrowCenterY = self.mj_h * 0.5;
     CGPoint arrowCenter = CGPointMake(arrowCenterX, arrowCenterY);
@@ -96,6 +98,9 @@
             [UIView animateWithDuration:MJRefreshSlowAnimationDuration animations:^{
                 self.loadingView.alpha = 0.0;
             } completion:^(BOOL finished) {
+                // 防止动画结束后，状态已经不是MJRefreshStateIdle
+                if (self.state != MJRefreshStateIdle) return;
+                
                 self.loadingView.alpha = 1.0;
                 [self.loadingView stopAnimating];
                 
