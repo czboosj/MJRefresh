@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MJRefreshBackNormalFooter : MJRefreshBackStateFooter
+/// 闲置状态隐藏箭头, 配合settitle 处理XR 上闲置状态 显示问题
+@property (assign, nonatomic) BOOL isIdleHiddenArrowView;
 @property (weak, nonatomic, readonly) UIImageView *arrowView;
 @property (weak, nonatomic, readonly) UIActivityIndicatorView *loadingView;
 

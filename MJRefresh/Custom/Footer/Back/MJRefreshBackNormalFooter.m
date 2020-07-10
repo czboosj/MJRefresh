@@ -87,6 +87,12 @@
     self.arrowView.tintColor = self.stateLabel.textColor;
 }
 
+- (void)setIsIdleHiddenArrowView:(BOOL)isIdleHiddenArrowView{
+    _isIdleHiddenArrowView = isIdleHiddenArrowView;
+    if (self.state == MJRefreshStateIdle){
+        self.arrowView.hidden = isIdleHiddenArrowView;
+    }
+}
 - (void)setState:(MJRefreshState)state
 {
     MJRefreshCheckState
@@ -103,11 +109,20 @@
                 
                 self.loadingView.alpha = 1.0;
                 [self.loadingView stopAnimating];
-                
-                self.arrowView.hidden = NO;
+                if (self.isIdleHiddenArrowView){
+                     self.arrowView.hidden = YES;
+                }else{
+                     self.arrowView.hidden = NO;
+                }
+               
             }];
         } else {
-            self.arrowView.hidden = NO;
+           
+            if (self.isIdleHiddenArrowView){
+                self.arrowView.hidden = YES;
+            }else{
+                self.arrowView.hidden = NO;
+            }
             [self.loadingView stopAnimating];
             [UIView animateWithDuration:MJRefreshFastAnimationDuration animations:^{
                 self.arrowView.transform = CGAffineTransformMakeRotation(0.000001 - M_PI);
