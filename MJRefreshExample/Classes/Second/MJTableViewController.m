@@ -243,7 +243,10 @@ static const CGFloat MJDuration = 2.0;
     [self example01];
     
     // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadMoreData方法）
-    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    [footer setIsIdleHiddenArrowView:YES];
+    self.tableView.mj_footer = footer;
+   
     // 设置了底部inset
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 30, 0);
     // 忽略掉底部inset

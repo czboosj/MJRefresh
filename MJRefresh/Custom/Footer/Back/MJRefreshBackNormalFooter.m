@@ -89,8 +89,8 @@
 
 - (void)setIsIdleHiddenArrowView:(BOOL)isIdleHiddenArrowView{
     _isIdleHiddenArrowView = isIdleHiddenArrowView;
-    if (self.state == MJRefreshStateIdle){
-        self.arrowView.hidden = isIdleHiddenArrowView;
+    if (self.state == MJRefreshStateIdle && _arrowView != nil){
+        _arrowView.hidden = isIdleHiddenArrowView;
     }
 }
 - (void)setState:(MJRefreshState)state
